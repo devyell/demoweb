@@ -12,7 +12,7 @@ pipeline {
        }
       steps{
       bat 'mvn clean install'
-        mail bcc: '', body: 'Se ha generado un despliegue de una rama BRANCH_NAME', cc: '', from: '', replyTo: '', subject: 'branch desplegado', to: 'wcvaler@pe.ibm.com'
+        mail bcc: '', body: 'Se ha generado un despliegue de una rama BRANCH_NAME', cc: '', from: '', replyTo: '', subject: 'branch '+BRANCH_NAME+' desplegado', to: 'wcvaler@pe.ibm.com'
       }
     }
   }
